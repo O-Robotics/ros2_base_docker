@@ -1,14 +1,13 @@
 FROM ros:humble-ros-base
 
+ENV LANG=C.UTF-8 \
+    LC_ALL=C.UTF-8
+    
 RUN apt-get update && apt-get install -y \
-    python3-colcon-common-extensions \
-    python3-rosdep \
+    python3-pip \
     && rm -rf /var/lib/apt/lists/*
     
 RUN pip3 install --no-cache-dir numpy fastapi uvicorn
-
-RUN rosdep init && rosdep update
-
 
 # Set the working directory in the container
 WORKDIR /frontend
