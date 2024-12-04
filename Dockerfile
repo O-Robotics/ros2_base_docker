@@ -22,4 +22,4 @@ EXPOSE 5001
 RUN . /opt/ros/humble/setup.sh && colcon build
 
 
-CMD ["bash", "-c", "source /opt/ros/humble/setup.sh && source install/setup.bash && uvicorn main:app --host 0.0.0.0 --port 5001"]
+CMD ["bash", "-c", "source /opt/ros/humble/setup.sh && source install/setup.bash"]
