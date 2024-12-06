@@ -37,7 +37,7 @@ docker run -it --rm orobot_rectangle_nav bash
 Use ros2 system to run server and send coordinates:
 ```
 rm -rf build install log
-colcon build --packages-select send_rectangle_nav_server
+colcon build --packages-select orobot_rectangle_nav
 source install/setup.bash
 ```
 ```
