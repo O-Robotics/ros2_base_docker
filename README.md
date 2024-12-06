@@ -42,7 +42,7 @@ colcon build --packages-select orobot_rectangle_nav
 source install/setup.bash
 ```
 ```
-run orobot_rectangle_nav fastapi_server
+ros2 run orobot_rectangle_nav fastapi_server
 ```
 
 
