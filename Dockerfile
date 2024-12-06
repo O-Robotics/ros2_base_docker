@@ -20,4 +20,4 @@ EXPOSE 5001
 
 RUN . /opt/ros/humble/setup.sh
 
-CMD ["bash", "-c", "source /opt/ros/humble/setup.sh && source install/setup.bash"]
+CMD ["bash", "-c", "source /opt/ros/humble/setup.sh"]
