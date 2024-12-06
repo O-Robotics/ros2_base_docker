@@ -10,10 +10,10 @@ RUN apt-get update && apt-get install -y \
 RUN pip3 install --no-cache-dir numpy fastapi uvicorn
 
 # Set the working directory in the container
-WORKDIR /frontend
+WORKDIR /frontend_ws
 
 # Copy the project files into the container (from the host to /frontend inside the container)
-COPY . /ros2_ws
+COPY . /frontend_ws
 
 # Expose port 5001 for FastAPI WebSocket server
 EXPOSE 5001
