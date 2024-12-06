@@ -13,7 +13,7 @@ RUN pip3 install --no-cache-dir numpy fastapi uvicorn
 WORKDIR /frontend
 
 # Copy the project files into the container (from the host to /frontend inside the container)
-COPY . /ros_send_ws
+COPY . /ros2_ws
 
 # Expose port 5001 for FastAPI WebSocket server
 EXPOSE 5001
@@ -21,5 +21,4 @@ EXPOSE 5001
 RUN . /opt/ros/humble/setup.sh && colcon build --packages-select orobot_rectangle_nav
 
 
-
-CMD ["bash", "-c", "source /opt/ros/humble/setup.sh && source install/setup.bash && ros2 run orobot_rectangle_nav orobot_nav_node"]
+CMD ["bash", "-c", "source /opt/ros/humble/setup.sh && source install/setup.bash && ros2 run orobot_rectangle_nav fastapi_server"]
